@@ -1,12 +1,11 @@
-![logo](https://docsify.js.org/_media/icon.svg)
+![logo](image/frog.png)
 
-# 豆瓣影音
+# 文香蛙の小池塘
 
-> 使用Vue全家桶+Node.js搭建的小型全栈项目.
+> 干啥啥不行，整活第一名；学啥啥不会，偷懒不是罪。
 
-* 前端框架：vue-cli、vue-router、axios、vuex
-* UI类库：Mint-UI、Vant
-* 后端数据接口：Express、MongoDB
+* 前端：听说过 vue，鄙视过 php
+* 后端：抄过 c++, java, go, python
 
-[GitHub](https://github.com/Hanxueqing/Douban-Movie.git)
+[GitHub](https://github.com/wgrice)
 [Get Started](#quick-start)
