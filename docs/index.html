@@ -1,22 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>文香蛙の小池塘</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+  <link rel="stylesheet" href="//unpkg.com/vuep/dist/vuep.css" />
+  <!-- <link rel="stylesheet" href="//unpkg.com/docsify/themes/dark.css"> -->
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <style>
+    section.cover .cover-main>p a {
+      background-color: var(--theme-color, #42b983);
+      color: #fff !important;
+    }
+
+    .markdown-section pre {
+      background-color: #e8e8e8;
+    }
+
+    .markdown-section pre>code {
+      background-color: #e8e8e8;
+    }
+
+    pre:after {
+      color: #797676;
+    }
+  </style>
+
 </head>
+
 <body>
-  <div id="app"></div>
+  <div id="app">加载中...</div>
   <script>
     window.$docsify = {
-      name: '',
+      name: "文香蛙",
       repo: 'https://github.com/wgrice/notebook',
-      coverpage: true
-    }
+      // alias: {
+      //   "/.*/_sidebar.md": "/_sidebar.md",
+      // },
+      // 跳转后自动到顶部
+      auto2top: true,
+      subMaxLevel: 1,
+      onlyCover: true, // 主页仅加载封面，不能滚动到其他页
+      autoHeader: false,
+      coverpage: true,
+      loadNavbar: true,
+      loadSidebar: true, // 侧边栏文档目录
+      homepage: 'README.md', // 主页，默认是README.md，也可自己指定
+      mergeNavbar: true, // Navbar将在较小的屏幕上与侧边栏合并
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      // PLUGINS
+      // ----------------------------------------------------------------
+      // 页面右侧toc
+      toc: {
+        tocMaxLevel: 4,
+        target: "h2, h3, h4, h5, h6",
+      },
+      notFoundPage: '_404.md', //默认_404.md  可根据层级指定 notFoundPage:{'/':'_404.md','/app':'app/_404.md'}
+
+      // 全文搜索
+      search: {
+        depth: 6,
+        noData: "没有搜到!",
+        placeholder: "搜索...",
+        // 避免搜索索引冲突,同一域下的多个网站之间
+        namespace: "website-1",
+      },
+      // 底部导航
+      pagination: {
+        previousText: "上一页",
+        nextText: "下一页",
+        crossChapter: true,
+        crossChapterText: true,
+      }
+    };
   </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <!-- docsify -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+  <!-- 代码高亮  https://cdn.jsdelivr.net/npm/prismjs@1/components/ -->
+
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cmake.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-csharp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-docker.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
+
+
+  <!-- 多tab支持 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
+
+  <!-- 代码复制 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+
+  <!-- 底部 上一页下一页 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script>
+
+  <!-- 全文搜索 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+
+  <!-- 图片放大缩小 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+
+  <!-- 侧边栏目录折叠 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+  <!-- 页面右侧 TOC -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-toc@1.1.0/dist/docsify-plugin-toc.min.js"></script>
+
+  <!-- emoji -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 </body>
+
 </html>

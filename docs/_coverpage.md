@@ -1,4 +1,4 @@
-![logo](image/frog.png)
+![logo](logo.png)
 
 # 文香蛙の小池塘
 
@@ -8,4 +8,4 @@
 * 后端：抄过 c++, java, go, python
 
 [GitHub](https://github.com/wgrice)
-[Get Started](#quick-start)
+[Get Started](/category/java/)
